@@ -115,7 +115,7 @@ app.post("/adduser",async(req,res)=>{
                     to: `${req.body.email}`,
                     subject: `Secret Mail from nodejs`,
                     html: `<div>Please click the below link to activate your account and Change Your Password.This link will be valid for 24hrs only
-                            <a href="http://localhost:3000/passwordupdate">Click Here</a></div>`,
+                            <a href="https://invoice-management-vijay.netlify.app/passwordupdate">Click Here</a></div>`,
                   };
                   transporter.sendMail(mailoptions, (err, info) => {
                     if (err) {
@@ -236,7 +236,7 @@ app.post("/forgetpassword",async(req,res)=>{
             to: `vijay.ganeshp95@gmail.com`,
             subject: `Password Reset Link `,
             html: `<div>Please click the below link to Reset Your Password.
-                    <a href="http://localhost:3000/changepassword">Click here</a></div>`,
+                    <a href="https://invoice-management-vijay.netlify.app/changepassword">Click here</a></div>`,
           };
           transporter.sendMail(mailoptions, (err, info) => {
             if (err) {

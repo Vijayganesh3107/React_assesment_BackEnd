@@ -11,6 +11,9 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const url=process.env.MONGO_URL;
+app.get("/",async(req,res)=>{
+    res.send("Hello World")
+})
 app.post("/create-invoice",async(req,res)=>{
     const client=await mongoclient.connect(url);
     const db=client.db("assignment");

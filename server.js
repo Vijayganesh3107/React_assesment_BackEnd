@@ -11,6 +11,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const url=process.env.MONGO_URL;
+
 app.get("/",async(req,res)=>{
     res.send("Hello World")
 })
